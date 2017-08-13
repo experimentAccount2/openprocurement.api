@@ -20,10 +20,10 @@ install:
 before_script:
   - pip install -r test_requirements.txt --use-mirrors
 script:
-  - nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_b3b0992eea_1
-  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_b3b0992eea_1 ./profile_openprocurement.api_b3b0992eea_1
+  - nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_b3b0992eea_2
+  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_b3b0992eea_2 ./profile_openprocurement.api_b3b0992eea_2
 
 
 after_success:
   - coveralls
- #2017-08-13 21:02:16 modified at 0 #2017-08-13 21:02:21 modified at 1
+ #2017-08-13 21:02:16 modified at 0 #2017-08-13 21:02:21 modified at 1 #2017-08-13 21:02:25 modified at 2
