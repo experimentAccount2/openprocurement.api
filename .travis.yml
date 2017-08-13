@@ -5,18 +5,27 @@ services:
   - couchdb
 before_install:
   - easy_install -U setuptools
+   # add for profile
+  - sudo add-apt-repository -y ppa:ubuntu-toolchain-r/test
+  - sudo apt-get update -qq
+
+
 install:
   - pip install . --use-mirrors
+# add for profile
+  - sudo apt-get install -qq g++-4.8
+  - export CXX="g++-4.8"
+  - pip install nose-cprof
+  - pip install properform
+
 before_script:
   - pip install -r test_requirements.txt --use-mirrors
 script:
-  - nosetests
+  - nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_b86af8d895_0
+  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_b86af8d895_0 ./profile_openprocurement.api_b86af8d895_0
+
+
+
 after_success:
   - coveralls
-notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/82aa866c2f7ed47c961f
-    on_success: always
-    on_failure: always
-    on_start: false
+ #2017-08-13 20:29:18 modified at 0
