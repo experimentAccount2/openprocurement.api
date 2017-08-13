@@ -21,10 +21,10 @@ before_script:
   - pip install properform
 
 script:
-  - nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_38f7bdefe3_1
-  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_38f7bdefe3_1 ./profile_openprocurement.api_38f7bdefe3_1
+  - nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_38f7bdefe3_2
+  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_38f7bdefe3_2 ./profile_openprocurement.api_38f7bdefe3_2
 
 
 after_success:
   - coveralls
- #2017-08-13 19:46:22 modified at 0 #2017-08-13 19:46:27 modified at 1
+ #2017-08-13 19:46:22 modified at 0 #2017-08-13 19:46:27 modified at 1 #2017-08-13 19:46:31 modified at 2
