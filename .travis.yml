@@ -34,9 +34,9 @@ install:
   - pip install properform
 
 script:
-  - bin/nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_4df2a89ffe_2
-  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_4df2a89ffe_2 ./profile_openprocurement.api_4df2a89ffe_2
+  - bin/nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_4df2a89ffe_3
+  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_4df2a89ffe_3 ./profile_openprocurement.api_4df2a89ffe_3
 
 after_success:
   - bin/coveralls
- #2017-08-13 17:15:57 modified at 0 #2017-08-13 17:16:01 modified at 1 #2017-08-13 17:16:05 modified at 2
+ #2017-08-13 17:15:57 modified at 0 #2017-08-13 17:16:01 modified at 1 #2017-08-13 17:16:05 modified at 2 #2017-08-13 17:16:09 modified at 3
