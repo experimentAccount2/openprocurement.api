@@ -25,10 +25,10 @@ install:
 
 
 script:
-  - bin/nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_4106be82e0_3
-  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_4106be82e0_3 ./profile_openprocurement.api_4106be82e0_3
+  - bin/nosetests --with-cprofile --cprofile-stats-erase --cprofile-stats-file=profile_openprocurement.api_4106be82e0_4
+  - python -m properform Push 47.88.50.110:15554 asdf_openprocurement.api_4106be82e0_4 ./profile_openprocurement.api_4106be82e0_4
 
 
 after_success:
   - bin/coveralls
- #2017-08-13 18:41:48 modified at 0 #2017-08-13 18:41:53 modified at 1 #2017-08-13 18:41:58 modified at 2 #2017-08-13 18:42:02 modified at 3
+ #2017-08-13 18:41:48 modified at 0 #2017-08-13 18:41:53 modified at 1 #2017-08-13 18:41:58 modified at 2 #2017-08-13 18:42:02 modified at 3 #2017-08-13 18:42:07 modified at 4
